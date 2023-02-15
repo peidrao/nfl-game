@@ -53,7 +53,7 @@ class Command(BaseCommand):
                 c = Conferency.objects.create(name=conf['name'], abbreviation=conf['abbreviation'])
                 conferences.append(c)
             self.stdout.write(self.style.SUCCESS('Conferences were created'))
-        
+
         if not Division.objects.all().count() == 8:
             for divi in DIVISIONS:
                 Division.objects.bulk_create(
@@ -68,4 +68,3 @@ class Command(BaseCommand):
                 division = Division.objects.get(name=team['division'], conferency__abbreviation=team['tag'])
                 Team.objects.create(name=team['name'], stadium=team['stadium'], logo=team['logo'], division=division)
         self.stdout.write(self.style.SUCCESS('Teams were created'))
-        

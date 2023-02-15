@@ -59,7 +59,7 @@ DATABASES = {
         "NAME": "db_nfl",
         "USER": "nfl_user",
         "PASSWORD": "nfl_password",
-        "HOST": "localhost",  
+        "HOST": "localhost",
         "PORT": 5433,
     }
 }

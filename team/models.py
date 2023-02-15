@@ -19,7 +19,7 @@ class Conferency(models.Model):
 class Division(models.Model):
     name = models.CharField(max_length=20)
     conferency = models.ForeignKey(Conferency, on_delete=models.SET_NULL, null=True, related_name='division_conferency')
-    
+
     created_at = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -27,7 +27,6 @@ class Division(models.Model):
         verbose_name_plural = _('divisions')
         db_table = 'db_division'
         ordering = ('id',)
-
 
 
 class Team(models.Model):
