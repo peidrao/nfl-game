@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 0px;
+  min-height: 100vh;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.nfl-logo {
+  width: 60%;
+}
+
+@media (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
