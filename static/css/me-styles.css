@@ -5,17 +5,48 @@
   min-height: 100vh;
 }
 
-.image {
+.grid-login {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  min-height: 100vh;
+}
+
+.center {
   display: flex;
   justify-content: center;
 }
 
-.nfl-logo {
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .login { */
+/* display: flex; */
+/* justify-content: center; */
+/* } */
+
+.header-login {
+  align-content: flex-start;
+  align-items: center;
+}
+
+.form-login p {
+  text-align: center;
+  color: #fff;
+}
+
+.center-element {
   width: 60%;
 }
 
 @media (max-width: 550px) {
   .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-login {
     grid-template-columns: 1fr;
   }
 }
