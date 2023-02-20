@@ -16,29 +16,39 @@
   justify-content: center;
 }
 
-.form-login {
+.initial-option {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .login { */
-/* display: flex; */
-/* justify-content: center; */
-/* } */
+.initial-option p {
+  text-align: center;
+  color: #fff;
+}
 
 .header-login {
   align-content: flex-start;
   align-items: center;
 }
 
-.form-login p {
-  text-align: center;
-  color: #fff;
-}
-
 .center-element {
   width: 60%;
+}
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-conference {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+.conference-container:hover {
+  background-color: #0dcaf0;
 }
 
 @media (max-width: 550px) {

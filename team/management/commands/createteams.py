@@ -3,8 +3,8 @@ from django.core.management.base import BaseCommand
 from team.models import Conferency, Division, Team
 
 CONFERENCES = [
-    {'name': 'National Football Conference', 'abbreviation': 'NFC'},
-    {'name': 'American Football Conference', 'abbreviation': 'AFC'}
+    {'name': 'National Football Conference', 'abbreviation': 'NFC', 'logo': 'nfc.png'},
+    {'name': 'American Football Conference', 'abbreviation': 'AFC', 'logo': 'afc.png'}
     ]
 DIVISIONS = ['North', 'South', 'East', 'West']
 
@@ -50,7 +50,7 @@ class Command(BaseCommand):
 
         if not Conferency.objects.all().count() == 2:
             for conf in CONFERENCES:
-                c = Conferency.objects.create(name=conf['name'], abbreviation=conf['abbreviation'])
+                c = Conferency.objects.create(**conf)
                 conferences.append(c)
             self.stdout.write(self.style.SUCCESS('Conferences were created'))
 
