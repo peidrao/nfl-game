@@ -14,13 +14,11 @@
         <div class="row g-4">
             {% for team in teams %}
             <div class="col-lg-3 col-md-6">
-                <div class="team-item rounded overflow-hidden">
+                <div class="team-item rounded overflow-hidden" id={{team.id}}>
                     <div class="position-relative team-card">
                         <img class="img-fluid teams-img" src="/static/assets/logos/{{team.logo}}" alt="{{team.logo}}">
                         <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="bi bi-three-dots"></i></a>
                         </div>
                     </div>
                     <div class="text-center p-4 mt-3">
