@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+
+{% block header %} {% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Select Your Conference</h1>
+<div class="grid-container">
+    {% for conf in conferences %}
+    <div class="conference-container initial-option">
+        <img src="/static/assets/logos/{{conf.logo}}" alt={{conf.logo}} class="logo-conference">
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+{% block back_top %} {% endblock %}
+{% block footer %} {% endblock %}
+{% block dependencies %} {% endblock %}
