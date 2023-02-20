@@ -20,8 +20,7 @@ INSTALLED_APPS = [
 
     'team',
     'index',
-
-
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +53,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'nfl.wsgi.application'
 
-
+AUTH_USER_MODEL = "user.Profile"
 
 DATABASES = {
     "default": {
