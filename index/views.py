@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-from team.models import Conferency
+from team.models import Conferency, Team
 from user.models import Profile
 
 
@@ -50,3 +50,12 @@ class ConferencesView(LoginRequiredMixin, generic.TemplateView):
     def get(self, request) -> HTTPResponse:
         confereces = Conferency.objects.all()
         return render(request, self.template_name, {'conferences': confereces})
+
+
+class TeamsListView(LoginRequiredMixin, generic.View):
+    login_url = '/login/'
+    template_name: str = 'teams.html'
+
+    def get(self, request, conference_id):
+        teams = Team.objects.filter(division__conferency_id=conference_id)
+        return render(request, self.template_name, {'teams': teams})

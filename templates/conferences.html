@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-
+{% load static %}
 
 {% block header %} {% endblock %}
 
@@ -8,7 +8,7 @@
 <h1 class="text-center">Select Your Conference</h1>
 <div class="grid-container">
     {% for conf in conferences %}
-    <div class="conference-container initial-option">
+    <div class="conference-container initial-option" id="{{conf.id}}">
         <img src="/static/assets/logos/{{conf.logo}}" alt={{conf.logo}} class="logo-conference">
     </div>
     {% endfor %}
@@ -17,4 +17,7 @@
 {% endblock %}
 {% block back_top %} {% endblock %}
 {% block footer %} {% endblock %}
-{% block dependencies %} {% endblock %}
+{% block dependencies %}
+{% include "dependencies.html" %}
+<script src="{% static 'js/initial.js' %}"></script>
+{% endblock %}
