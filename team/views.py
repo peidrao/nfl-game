@@ -1,5 +1,3 @@
-from genericpath import exists
-from django.shortcuts import render
 from django.views import generic
 
 from rest_framework import generics, views, status
