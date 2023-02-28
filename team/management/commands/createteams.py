@@ -35,7 +35,7 @@ TEAMS = [
     {'name': 'Cleveland Browns', 'stadium': 'First Energy Stadium', 'logo': 'cleveland-browns.png', 'division': 'North', 'tag': 'AFC'} ,
     {'name': 'Buffalo Bills', 'stadium': 'Bills Stadium', 'logo': 'buffalo-bills.png', 'division': 'East', 'tag': 'AFC' },
     {'name': 'Dallas Cowboys', 'stadium': 'At&T Stadium', 'logo': 'dallas-cowboys.png', 'division': 'East', 'tag': 'NFC' },
-    {'name': 'Washington Redskins', 'stadium': 'FedExField', 'logo': 'washington-redskins.png', 'division': 'East', 'tag': 'NFC' },
+    {'name': 'Washington Commanders', 'stadium': 'FedExField', 'logo': 'washington-redskins.png', 'division': 'East', 'tag': 'NFC' },
     {'name': 'Miami Dolphins', 'stadium': 'Hard Rock Stadium', 'logo': 'miami-dolphins.png', 'division': 'East', 'tag': 'AFC' },
     {'name': 'New England Patriots', 'stadium': 'Gillette Stadium', 'logo': 'new-england-patriots.png', 'division': 'East', 'tag': 'AFC' },
     {'name': 'New York Giants', 'stadium': 'MetLife Stadium', 'logo': 'new-york-giants.png', 'division': 'East', 'tag': 'NFC' },
