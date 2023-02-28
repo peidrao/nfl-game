@@ -7,3 +7,4 @@ from team.models import Team, Conferency
 class SeasonCreateView(views.APIView):
 
     def post(self, request):
+        pass
