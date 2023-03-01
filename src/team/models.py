@@ -42,6 +42,9 @@ class Team(models.Model):
     )
     logo = models.CharField(max_length=250)
 
+    primary_color = models.CharField(max_length=20)
+    secondary_color = models.CharField(max_length=20)
+
     class Meta:
         verbose_name = _("team")
         verbose_name_plural = _("teams")
