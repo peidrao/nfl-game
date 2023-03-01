@@ -42,6 +42,16 @@ class AccountView(LoginRequiredMixin, generic.TemplateView):
     login_url = "/login/"
     template_name: str = "account.html"
 
+    def get(self, request) -> HTTPResponse:
+        context = {}
+        try:
+            team = request.user.teamprofile_set.all().first().team
+            context["team"] = team
+            context["teams"] = Team.objects.filter(division=team.division)
+        except Exception as e:
+            print(e)
+        return render(request, self.template_name, context)
+
 
 class ConferencesView(LoginRequiredMixin, generic.TemplateView):
     login_url = "/login/"
