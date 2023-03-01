@@ -1,10 +1,9 @@
 from http.client import HTTPResponse
 from django.shortcuts import render, HttpResponseRedirect
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.views import generic
 from django.urls import reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
-
 
 from team.models import Conferency, Team
 from user.models import Profile
@@ -36,6 +35,17 @@ class LoginView(generic.View):
 
     def get(self, request) -> HTTPResponse:
         return render(request, self.template_name, {})
+
+
+class LogoutView(generic.RedirectView):
+    permanent = False
+    query_string = True
+    pattern_name = "index"
+
+    def get_redirect_url(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            logout(self.request)
+        return super(LogoutView, self).get_redirect_url(*args, **kwargs)
 
 
 class AccountView(LoginRequiredMixin, generic.TemplateView):
