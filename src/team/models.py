@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 
-class Conferency(models.Model):
+class Conference(models.Model):
     name = models.CharField(max_length=50)
     abbreviation = models.CharField(max_length=3)
     created_at = models.DateTimeField(default=timezone.now)
@@ -18,8 +18,8 @@ class Conferency(models.Model):
 
 class Division(models.Model):
     name = models.CharField(max_length=20)
-    conferency = models.ForeignKey(
-        Conferency,
+    conference = models.ForeignKey(
+        Conference,
         on_delete=models.SET_NULL,
         null=True,
         related_name="division_conferency",
