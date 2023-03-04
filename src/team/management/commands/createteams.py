@@ -38,7 +38,7 @@ class Command(BaseCommand):
         for team in teams:
             if not Team.objects.filter(name=team["name"]).exists():
                 division = Division.objects.get(
-                    name=team["division"], conferency__abbreviation=team["tag"]
+                    name=team["division"], conference__abbreviation=team["tag"]
                 )
                 Team.objects.create(
                     name=team["name"],
