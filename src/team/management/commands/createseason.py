@@ -13,7 +13,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Season were created"))
 
         if season:
-            df = pandas.read_csv("season-22-23.csv")
+            df = pandas.read_csv("./../season-22-23.csv")
             df.drop(
                 [
                     "Day",
@@ -33,7 +33,6 @@ class Command(BaseCommand):
             )
 
             for _, item in df.iterrows():
-                print(item["Winner/tie"])
                 week = Week.objects.get(name=f'Week {item["Week"]}')
                 team = Team.objects.get(name=item["Winner/tie"])
                 team2 = Team.objects.get(name=item["Loser/tie"])

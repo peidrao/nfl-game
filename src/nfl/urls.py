@@ -9,4 +9,5 @@ urlpatterns = [
     path("", include("index.urls")),
     path("", include("team.urls")),
     path("", include("game.urls")),
+    path("", include("user.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

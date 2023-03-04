@@ -2,7 +2,7 @@ import json
 
 from django.core.management.base import BaseCommand
 
-from team.models import Conferency, Division, Team
+from team.models import Conference, Division, Team
 
 
 CONFERENCES = [
@@ -16,9 +16,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         conferences = []
 
-        if not Conferency.objects.all().count() == 2:
+        if not Conference.objects.all().count() == 2:
             for conf in CONFERENCES:
-                c = Conferency.objects.create(**conf)
+                c = Conference.objects.create(**conf)
                 conferences.append(c)
             self.stdout.write(self.style.SUCCESS("Conferences were created"))
 
@@ -26,8 +26,8 @@ class Command(BaseCommand):
             for divi in DIVISIONS:
                 Division.objects.bulk_create(
                     [
-                        Division(name=divi, conferency=conferences[0]),
-                        Division(name=divi, conferency=conferences[1]),
+                        Division(name=divi, conference=conferences[0]),
+                        Division(name=divi, conference=conferences[1]),
                     ]
                 )
 
@@ -38,7 +38,7 @@ class Command(BaseCommand):
         for team in teams:
             if not Team.objects.filter(name=team["name"]).exists():
                 division = Division.objects.get(
-                    name=team["division"], conferency__abbreviation=team["tag"]
+                    name=team["division"], conference__abbreviation=team["tag"]
                 )
                 Team.objects.create(
                     name=team["name"],
