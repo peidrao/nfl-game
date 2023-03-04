@@ -43,7 +43,7 @@ class ConferecyByIDView(generic.DetailView):
     template_name = "conference_teams.html"
 
     def get(self, request, id):
-        divisions = Division.objects.filter(conferency_id=id)
+        divisions = Division.objects.filter(conference_id=id)
         return render(request, self.template_name, {"divisions": divisions})
 
 
@@ -61,5 +61,5 @@ class TeamsByConferenceView(LoginRequiredMixin, generic.View):
     template_name: str = "teams.html"
 
     def get(self, request, conference_id):
-        teams = Team.objects.filter(division__conferency_id=conference_id)
+        teams = Team.objects.filter(division__conference_id=conference_id)
         return render(request, self.template_name, {"teams": teams})

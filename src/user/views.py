@@ -8,7 +8,7 @@ from team.models import Team
 
 class AccountView(LoginRequiredMixin, generic.TemplateView):
     login_url = "/login/"
-    template_name: str = "account.html"
+    template_name: str = "account/account.html"
 
     def get(self, request) -> HTTPResponse:
         context = {}
