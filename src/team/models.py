@@ -36,6 +36,7 @@ class Division(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=100)
+    abbreviation = models.CharField(max_length=4)
     stadium = models.CharField(max_length=100)
     division = models.ForeignKey(
         Division, on_delete=models.SET_NULL, null=True, related_name="team_division"

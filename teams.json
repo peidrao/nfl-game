@@ -6,7 +6,8 @@
     "division": "West",
     "tag": "NFC",
     "primary_color": "#97233F",
-    "secondary_color": "#000000"
+    "secondary_color": "#000000",
+    "abbreviation": "ARI"
   },
   {
     "name": "Kansas City Chiefs",
@@ -15,7 +16,8 @@
     "division": "West",
     "tag": "AFC",
     "primary_color": "#E31837",
-    "secondary_color": "#FFB81C"
+    "secondary_color": "#FFB81C",
+    "abbreviation": "KC"
   },
   {
     "name": "Las Vegas Raiders",
@@ -24,7 +26,8 @@
     "division": "West",
     "tag": "AFC",
     "primary_color": "#000000",
-    "secondary_color": "#A5ACAF"
+    "secondary_color": "#A5ACAF",
+    "abbreviation": "LV"
   },
   {
     "name": "Seattle Seahawks",
@@ -33,7 +36,8 @@
     "division": "West",
     "tag": "NFC",
     "primary_color": "#002244",
-    "secondary_color": "#69BE28"
+    "secondary_color": "#69BE28",
+    "abbreviation": "SEA"
   },
   {
     "name": "San Francisco 49ers",
@@ -42,7 +46,8 @@
     "division": "West",
     "tag": "NFC",
     "primary_color": "#AA0000",
-    "secondary_color": "#B3995D"
+    "secondary_color": "#B3995D",
+    "abbreviation": "SF"
   },
   {
     "name": "Los Angeles Rams",
@@ -51,7 +56,8 @@
     "division": "West",
     "tag": "NFC",
     "primary_color": "#003594",
-    "secondary_color": "#FFA300"
+    "secondary_color": "#FFA300",
+    "abbreviation": "LA"
   },
   {
     "name": "Los Angeles Chargers",
@@ -60,7 +66,8 @@
     "division": "West",
     "tag": "AFC",
     "primary_color": "#0080C6",
-    "secondary_color": "#FFC20E"
+    "secondary_color": "#FFC20E",
+    "abbreviation": "LAC"
   },
   {
     "name": "Denver Broncos",
@@ -69,7 +76,8 @@
     "division": "West",
     "tag": "AFC",
     "primary_color": "#FB4F14",
-    "secondary_color": "#002244"
+    "secondary_color": "#002244",
+    "abbreviation": "DEN"
   },
   {
     "name": "Indianapolis Colts",
@@ -78,7 +86,8 @@
     "division": "South",
     "tag": "AFC",
     "primary_color": "#002C5F",
-    "secondary_color": "#A2AAAD"
+    "secondary_color": "#A2AAAD",
+    "abbreviation": "IND"
   },
   {
     "name": "Jacksonville Jaguars",
@@ -87,7 +96,8 @@
     "division": "South",
     "tag": "AFC",
     "primary_color": "#101820",
-    "secondary_color": "#D7A22A"
+    "secondary_color": "#D7A22A",
+    "abbreviation": "JAX"
   },
   {
     "name": "Houston Texans",
@@ -96,7 +106,8 @@
     "division": "South",
     "tag": "AFC",
     "primary_color": "#03202F",
-    "secondary_color": "#A71930"
+    "secondary_color": "#A71930",
+    "abbreviation": "HOU"
   },
   {
     "name": "Tampa Bay Buccaneers",
@@ -105,7 +116,8 @@
     "division": "South",
     "tag": "NFC",
     "primary_color": "#D50A0A",
-    "secondary_color": "#FF7900"
+    "secondary_color": "#FF7900",
+    "abbreviation": "TB"
   },
   {
     "name": "New Orleans Saints",
@@ -114,7 +126,8 @@
     "division": "South",
     "tag": "NFC",
     "primary_color": "#D3BC8D",
-    "secondary_color": "#101820"
+    "secondary_color": "#101820",
+    "abbreviation": "NO"
   },
   {
     "name": "Atlanta Falcons",
@@ -123,7 +136,8 @@
     "division": "South",
     "tag": "NFC",
     "primary_color": "#A71930",
-    "secondary_color": "#000000"
+    "secondary_color": "#000000",
+    "abbreviation": "ATL"
   },
   {
     "name": "Tennessee Titans",
@@ -132,7 +146,8 @@
     "division": "South",
     "tag": "AFC",
     "primary_color": "#0C2340",
-    "secondary_color": "#4B92DB"
+    "secondary_color": "#4B92DB",
+    "abbreviation": "TEN"
   },
   {
     "name": "Carolina Panthers",
@@ -141,7 +156,8 @@
     "division": "South",
     "tag": "NFC",
     "primary_color": "#0085CA",
-    "secondary_color": "#101820"
+    "secondary_color": "#101820",
+    "abbreviation": "CAR"
   },
   {
     "name": "Chicago Bears",
@@ -150,7 +166,8 @@
     "division": "North",
     "tag": "NFC",
     "primary_color": "#0B162A",
-    "secondary_color": "#C83803"
+    "secondary_color": "#C83803",
+    "abbreviation": "CHI"
   },
   {
     "name": "Green Bay Packers",
@@ -159,7 +176,8 @@
     "division": "North",
     "tag": "NFC",
     "primary_color": "#203731",
-    "secondary_color": "#FFB612"
+    "secondary_color": "#FFB612",
+    "abbreviation": "GB"
   },
   {
     "name": "Pittsburgh Steelers",
@@ -168,7 +186,8 @@
     "division": "North",
     "tag": "AFC",
     "primary_color": "#FFB612",
-    "secondary_color": "#101820"
+    "secondary_color": "#101820",
+    "abbreviation": "PIT"
   },
   {
     "name": "Cincinnati Bengals",
@@ -177,7 +196,8 @@
     "division": "North",
     "tag": "AFC",
     "primary_color": "#FB4F14",
-    "secondary_color": "#000000"
+    "secondary_color": "#000000",
+    "abbreviation": "CIN"
   },
   {
     "name": "Minnesota Vikings",
@@ -186,7 +206,8 @@
     "division": "North",
     "tag": "NFC",
     "primary_color": "#4F2683",
-    "secondary_color": "#FFC62F"
+    "secondary_color": "#FFC62F",
+    "abbreviation": "MIN"
   },
   {
     "name": "Detroit Lions",
@@ -195,7 +216,8 @@
     "division": "North",
     "tag": "NFC",
     "primary_color": "#0076B6",
-    "secondary_color": "#B0B7BC"
+    "secondary_color": "#B0B7BC",
+    "abbreviation": "DET"
   },
   {
     "name": "Baltimore Ravens",
@@ -204,7 +226,8 @@
     "division": "North",
     "tag": "AFC",
     "primary_color": "#241773",
-    "secondary_color": "#000000"
+    "secondary_color": "#000000",
+    "abbreviation": "BAL"
   },
   {
     "name": "Cleveland Browns",
@@ -213,7 +236,8 @@
     "division": "North",
     "tag": "AFC",
     "primary_color": "#311D00",
-    "secondary_color": "#FF3C00"
+    "secondary_color": "#FF3C00",
+    "abbreviation": "CLE"
   },
   {
     "name": "Buffalo Bills",
@@ -222,7 +246,8 @@
     "division": "East",
     "tag": "AFC",
     "primary_color": "#00338D",
-    "secondary_color": "#C60C30"
+    "secondary_color": "#C60C30",
+    "abbreviation": "BUF"
   },
   {
     "name": "Dallas Cowboys",
@@ -231,7 +256,8 @@
     "division": "East",
     "tag": "NFC",
     "primary_color": "#003594",
-    "secondary_color": "#041E42"
+    "secondary_color": "#041E42",
+    "abbreviation": "DAL"
   },
   {
     "name": "Washington Commanders",
@@ -240,7 +266,8 @@
     "division": "East",
     "tag": "NFC",
     "primary_color": "#5A1414",
-    "secondary_color": "#FFB612"
+    "secondary_color": "#FFB612",
+    "abbreviation": "WAS"
   },
   {
     "name": "Miami Dolphins",
@@ -249,7 +276,8 @@
     "division": "East",
     "tag": "AFC",
     "primary_color": "#008E97",
-    "secondary_color": "#FC4C02"
+    "secondary_color": "#FC4C02",
+    "abbreviation": "MIA"
   },
   {
     "name": "New England Patriots",
@@ -258,7 +286,8 @@
     "division": "East",
     "tag": "AFC",
     "primary_color": "#002244",
-    "secondary_color": "#C60C30"
+    "secondary_color": "#C60C30",
+    "abbreviation": "NE"
   },
   {
     "name": "New York Giants",
@@ -267,7 +296,8 @@
     "division": "East",
     "tag": "NFC",
     "primary_color": "#0B2265",
-    "secondary_color": "#A71930"
+    "secondary_color": "#A71930",
+    "abbreviation": "NYG"
   },
   {
     "name": "New York Jets",
@@ -276,7 +306,8 @@
     "division": "East",
     "tag": "AFC",
     "primary_color": "#125740",
-    "secondary_color": "#000000"
+    "secondary_color": "#000000",
+    "abbreviation": "NYJ"
   },
   {
     "name": "Philadelphia Eagles",
@@ -285,6 +316,7 @@
     "division": "East",
     "tag": "NFC",
     "primary_color": "#004C54",
-    "secondary_color": "#A5ACAF"
+    "secondary_color": "#A5ACAF",
+    "abbreviation": "PHI"
   }
 ]
