@@ -1,7 +1,9 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
+from django.db.models import Q
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from game.models import Match
 
 from team.models import Team
 
@@ -16,6 +18,7 @@ class AccountView(LoginRequiredMixin, generic.TemplateView):
             team = request.user.teamprofile_set.all().first().team
             context["team"] = team
             context["teams"] = Team.objects.filter(division=team.division)
+            context["matches"] = Match.objects.filter(Q(Q(home=team) | Q(away=team)))
         except Exception as e:
             print(e)
         return render(request, self.template_name, context)
