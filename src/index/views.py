@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import redirect, render, HttpResponseRedirect
 from django.contrib.auth import login, logout
 from django.views import generic
 from django.urls import reverse
@@ -8,6 +8,11 @@ from user.models import Profile
 
 class HomeView(generic.TemplateView):
     template_name: str = "initial.html"
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            return redirect("account")
+        return redirect("")
 
 
 class LoginView(generic.View):
