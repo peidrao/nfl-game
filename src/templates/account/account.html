@@ -30,6 +30,14 @@
         <div class="col-md-4">
             <div style="background-color:{{team.primary_color}};">
                 <h1 style="color: {{team.secondary_color}};">{{team.name}}</h1>
+
+                {% if is_start %}
+                <a href="">Teste</a>
+                {% else %}
+                    <button type="submit" class="button-start-season btn-primary">Start the season</button>
+                {% endif %}
+
+
             </div>
         </div>
     </div>
@@ -49,8 +57,8 @@
                     {% for match in matches %}
                     <tr>
                         <td>{{match.week.name}}</td>
-                        <td>{{match.home.name}}</td>
-                        <td>{{match.away.name}}</td>
+                        <td {% if match.home.name == team.name %} style="background-color: {{team.primary_color}}; color: {{team.secondary_color}};" {% endif %}>{{match.home.name}}</td>
+                        <td {% if match.away.name == team.name %} style="background-color: {{team.primary_color}}; color: {{team.secondary_color}}; " {% endif %}>{{match.away.name}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -60,4 +68,6 @@
 </div>
 
 {% endblock %}
-{% block back_top %} {% endblock %} {% block footer %} {%endblock %}
+{% block back_top %} {% endblock %}
+{% block footer %} {%endblock %}
+{% block footer_js %} {% include 'partials/footer_js.html' %} {% endblock %}
