@@ -25,11 +25,11 @@ class Week(models.Model):
 
 
 class Match(models.Model):
-    team1 = models.ForeignKey(
-        Team, on_delete=models.SET_NULL, null=True, related_name="match_team1"
+    home = models.ForeignKey(
+        Team, on_delete=models.SET_NULL, null=True, related_name="home_team"
     )
-    team2 = models.ForeignKey(
-        Team, on_delete=models.SET_NULL, null=True, related_name="match_team2"
+    away = models.ForeignKey(
+        Team, on_delete=models.SET_NULL, null=True, related_name="away_team"
     )
     season = models.ForeignKey(Season, on_delete=models.SET_NULL, null=True)
     week = models.ForeignKey(Week, on_delete=models.SET_NULL, null=True)

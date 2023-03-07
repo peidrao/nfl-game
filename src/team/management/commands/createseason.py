@@ -13,30 +13,24 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Season were created"))
 
         if season:
-            df = pandas.read_csv("./../season-22-23.csv")
+            df = pandas.read_csv("./../fake_season.csv")
             df.drop(
                 [
-                    "Day",
-                    "Date",
-                    "Time",
-                    "TOL",
-                    "YdsL",
-                    "YdsW",
-                    "TOW",
-                    "PtsW",
-                    "PtsL",
-                    "Unnamed: 5",
-                    "Unnamed: 7",
+                    "game_type",
+                    "away_rest",
+                    "home_rest",
+                    "location",
+                    "result",
                 ],
                 inplace=True,
                 axis=1,
             )
 
             for _, item in df.iterrows():
-                week = Week.objects.get(name=f'Week {item["Week"]}')
-                team = Team.objects.get(name=item["Winner/tie"])
-                team2 = Team.objects.get(name=item["Loser/tie"])
+                week = Week.objects.get(name=f'Week {item["week"]}')
+                home = Team.objects.get(abbreviation=item["home_team"])
+                away = Team.objects.get(abbreviation=item["away_team"])
 
-                Match.objects.create(team1=team, team2=team2, week=week, season=season)
+                Match.objects.create(away=away, home=home, week=week, season=season)
 
             self.stdout.write(self.style.SUCCESS("Matches were created"))

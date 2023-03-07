@@ -42,6 +42,7 @@ class Command(BaseCommand):
                 )
                 Team.objects.create(
                     name=team["name"],
+                    abbreviation=team["abbreviation"],
                     stadium=team["stadium"],
                     logo=team["logo"],
                     primary_color=team["primary_color"],
