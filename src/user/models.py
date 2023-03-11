@@ -54,6 +54,7 @@ class GameWeek(models.Model):
     match = models.ForeignKey(Match, on_delete=models.SET_NULL, null=True)
     scoreboard_home = models.IntegerField(default=0)
     scoreboard_away = models.IntegerField(default=0)
+    is_closed = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = _("game week")

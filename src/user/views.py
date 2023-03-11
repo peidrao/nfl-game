@@ -7,7 +7,6 @@ from rest_framework import views, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
-
 from game.models import Match, Season
 from team.models import Team
 from user.models import GameWeek, SeasonProfile
@@ -20,11 +19,15 @@ class AccountView(LoginRequiredMixin, generic.TemplateView):
     def get(self, request) -> HTTPResponse:
         context = {}
         try:
-            team = request.user.teamprofile_set.all().first().team
-            context["team"] = team
-            context["teams"] = Team.objects.filter(division=team.division)
-            context["matches"] = Match.objects.filter(Q(Q(home=team) | Q(away=team)))
+            profile = request.user.teamprofile_set.all().first()
+            context["team"] = profile.team
+            query = Q(Q(home=profile.team) | Q(away=profile.team))
+            context["teams"] = Team.objects.filter(division=profile.team.division)
+            context["matches"] = Match.objects.filter(query)
             context["is_start"] = request.user.is_start
+            context["match"] = GameWeek.objects.filter(
+                season=profile.seasonprofile_set.last()
+            ).last()
         except Exception as e:
             print(e)
         return render(request, self.template_name, context)
