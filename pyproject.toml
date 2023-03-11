@@ -30,5 +30,7 @@ build-backend = "poetry.core.masonry.api"
 exclude = [
     "*/migrations/*",
     "venv",
-    "settings.py"
+    "settings.py",
+    "__init__.py",
+    "models.py"
 ]
