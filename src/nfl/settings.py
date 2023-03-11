@@ -18,10 +18,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "team",
-    "game",
-    "index",
-    "user",
+    "app",
+    # "team",
+    # "game",
+    # "index",
+    # "user",
 ]
 
 MIDDLEWARE = [
@@ -47,7 +48,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "team.context_processors.conferences",
+                "app.context_processors.conferences",
             ],
         },
     },
@@ -55,7 +56,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "nfl.wsgi.application"
 
-AUTH_USER_MODEL = "user.Profile"
+# AUTH_USER_MODEL = "user.Profile"
 
 DATABASES = {
     "default": {
@@ -115,3 +116,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+AUTH_USER_MODEL = "app.Profile"
