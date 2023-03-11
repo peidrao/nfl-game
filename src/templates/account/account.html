@@ -28,19 +28,32 @@
             </table>
         </div>
         <div class="col-md-4">
-            <div style="background-color:{{team.primary_color}};">
-                <h1 style="color: {{team.secondary_color}};">{{team.name}}</h1>
+            <h1 style="color: {{team.primary_color}};">{{team.name}}</h1>
 
-                {% if is_start %}
-                <a href="">Teste</a>
-                {% else %}
-                    <button type="submit" class="button-start-season btn-primary">Start the season</button>
-                {% endif %}
+            {% if is_start %}
+            <h3>Next Match</h3>
+
+            <table class="table">
+                <thead class="bg-primary">
+                    <tr>
+                        <th>Week</th>
+                        <th>Home</th>
+                        <th>Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <td>{{match.match.week.name}}</td>
+                  <td>{{match.match.home.name}}</td>
+                  <td>{{match.match.away.name}}</td>
+                </tbody>
+
+            </table>
+            {% else %}
+            <button type="submit" class="button-start-season btn-primary">Start the season</button>
+            {% endif %}
 
 
-            </div>
         </div>
-    </div>
 
     <div class="row mt-4">
         <div class="col-md-8">
