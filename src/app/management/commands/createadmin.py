@@ -5,7 +5,7 @@ from app.domain.models.profile import Profile
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        if not Profile().objects.filter(email="admin@nfl.com").exists():
+        if not Profile.objects.filter(email="admin@nfl.com").exists():
             profile = Profile.objects.create(
                 email="admin@nfl.com",
                 username="goat",
