@@ -32,5 +32,4 @@ exclude = [
     "venv",
     "settings.py",
     "__init__.py",
-    "models.py"
 ]
