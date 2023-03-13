@@ -1,5 +1,5 @@
 from django.urls import path
-from app.api.views.user import ProfileCreateView
+from app.api.views.user import ProfileCreateView, TokenIsValidView
 
 from app.views.index import HomeView, LoginView, LogoutView
 from app.views.conference import (
@@ -27,4 +27,5 @@ urlpatterns = [
     path("account/", AccountView.as_view(), name="account"),
     path("season/start/", StartSeasonView.as_view(), name="start_season"),
     path("api/profile/", ProfileCreateView.as_view(), name="profile"),
+    path("api/token/is_valid/", TokenIsValidView.as_view(), name="token_is_valid"),
 ]
